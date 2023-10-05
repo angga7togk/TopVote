@@ -1,0 +1,7 @@
+# Ndaru Kontol Anjink memeg
+key: "" # key Api Pocket Vote
+top: 10 # list top
+format:
+  title: "§l§f✦ §6LEADERBOARD §f✦\n§l§e-= TOP VOTES =-\n\n"
+  message: "§r{top}. §a{player} => §b{vote} Votes\n"
+  footer: "\n§l§ewww.7togksmp.com"

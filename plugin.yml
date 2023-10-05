@@ -1,0 +1,15 @@
+name: TopVote
+main: angga7togk\topvote\TopVote
+version: 1.0.0
+api: 5.0.0
+author: Angga7Togk
+description: "Top Vote Leaderboard"
+
+commands:
+  settopvote:
+    description: "Ndaru memeg"
+    permission: topvote.command
+
+permissions:
+  topvote.command:
+    default: op
