@@ -39,9 +39,6 @@ class TopVote extends PluginBase {
 		$pos = $this->pos->get("position");
 		$this->particle[] = new FloatingText(new Vector3($pos[0], $pos[1], $pos[2]));
 		$this->getScheduler()->scheduleRepeatingTask(new UpdateTask($this), 20*5);
-		$this->getScheduler()->scheduleDelayedRepeatingTask(new ClosureTask(function():void{
-			
-		}), 20, 20);
     	$this->getServer()->getLogger()->Info("Location Have Been Load");
 	}
 
