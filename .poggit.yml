@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/angga7togk/TopVote
+build-by-default: true
+branches:
+- main
+projects:
+  TopVote:
+    path: ""
+...
