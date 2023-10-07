@@ -62,9 +62,12 @@ class AsyncTaskTV extends AsyncTask {
             Server::getInstance()->getLogger()->warning("Api key ga konek :V");
         } else {
             $json = json_decode($result);
-            foreach($json->voters as $voter){
-              	TopVote::getInstance()->votes[$voter->nickname] = $voter->votes;
-            }
+			if($json->voters != null){
+				foreach($json->voters as $voter){
+					TopVote::getInstance()->votes[$voter->nickname] = $voter->votes;
+				}
+			}
+            
         }
     }
 }
