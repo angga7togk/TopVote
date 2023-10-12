@@ -61,12 +61,16 @@ class AsyncTaskTV extends AsyncTask {
 		if ($result === "Error: server key not found") {
             Server::getInstance()->getLogger()->warning("Api key ga konek :V");
         } else {
-            $json = json_decode($result);
-			if($json->voters != null){
-				foreach($json->voters as $voter){
-					TopVote::getInstance()->votes[$voter->nickname] = $voter->votes;
-				}
-			}
+            $json = json_decode($result, true);
+if(isset($json["voters"])){
+
+foreach($json["voters"] as $voter){
+
+TopVote::getInstance()->votes[$voter["nickname"]] = $voter["votes"];
+
+}
+
+}
             
         }
     }
