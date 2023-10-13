@@ -84,9 +84,4 @@ class TopVote extends PluginBase
         return $this->particle;
 
     }
-
-    public static function getInstance(): self
-    {
-        return self::$instance;
-    }
 }
