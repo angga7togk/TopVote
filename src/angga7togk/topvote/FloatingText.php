@@ -5,17 +5,19 @@ namespace angga7togk\topvote;
 use pocketmine\math\Vector3;
 use pocketmine\Server;
 use pocketmine\world\particle\FloatingTextParticle;
+use pocketmine\world\World;
 
 class FloatingText extends FloatingTextParticle
 {
 
 
-    private $world;
-    private $pos;
-	
-    public function __construct(Vector3 $pos){
-		parent::__construct($pos, "");
-		$this->world = Server::getInstance()->getWorldManager()->getDefaultWorld();
+    private ?World $world;
+    private Vector3 $pos;
+
+    public function __construct(Vector3 $pos)
+    {
+        parent::__construct($pos, "");
+        $this->world = Server::getInstance()->getWorldManager()->getDefaultWorld();
         $this->pos = $pos;
     }
 
