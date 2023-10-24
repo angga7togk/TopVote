@@ -45,13 +45,13 @@ class TopVote extends PluginBase
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool
     {
         if (!$sender instanceof Player) {
-            $sender->sendMessage("pake command di server jir :V");
+            $sender->sendMessage("Please use command in game!");
             return false;
         }
         if ($command->getName() == "settopvote") {
             $this->pos->setNested("position", [$sender->getPosition()->getX(), $sender->getPosition()->getY(), $sender->getPosition()->getZ()]);
             $this->pos->save();
-            $sender->sendMessage("Silakan restart server ya tod biar update");
+            $sender->sendMessage("Please restart the server to update the leaderboard");
         }
         return true;
     }

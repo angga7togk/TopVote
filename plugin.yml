@@ -7,7 +7,7 @@ description: "Top Vote Leaderboard"
 
 commands:
   settopvote:
-    description: "Ndaru memeg"
+    description: "set top vote leaderboard location"
     permission: topvote.command
 
 permissions:

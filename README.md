@@ -1,2 +1,2 @@
 # TopVote
-TopVote plagin for pocketmine
+TopVote plugin for pocketmine
