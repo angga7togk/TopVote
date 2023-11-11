@@ -28,18 +28,14 @@ class TopVote extends PluginBase
         $this->saveResource("pos.yml");
         $this->pos = new Config($this->getDataFolder() . "pos.yml", Config::YAML, array());
         if (empty($this->getConfig()->get("key"))) {
-            $this->getServer()->getLogger()->warning("Key Api vote not found!");
-            $this->getServer()->shutdown(); //Stop the server if api key is empty
             return;
         }
         if (!$this->pos->exists("position")) {
-            $this->getServer()->getLogger()->info("Please Set Location");
             return;
         }
         $pos = $this->pos->get("position");
         $this->particle[] = new FloatingText(new Vector3($pos[0], $pos[1], $pos[2]));
         $this->getScheduler()->scheduleRepeatingTask(new UpdateTask($this), 20 * 5);
-        $this->getServer()->getLogger()->info("Location Have Been Load");
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool
